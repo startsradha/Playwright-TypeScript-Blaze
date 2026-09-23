@@ -1,0 +1,83 @@
+- generic [ref=f4e1]:
+  - text:             
+  - navigation [ref=f4e2]:
+    - link "PRODUCT STORE" [ref=f4e3] [cursor=pointer]:
+      - /url: index.html
+    - list [ref=f4e6]:
+      - listitem [ref=f4e7]:
+        - link "Home (current)" [ref=f4e8] [cursor=pointer]:
+          - /url: index.html
+          - text: Home
+          - generic [ref=f4e9]: (current)
+      - listitem [ref=f4e10]:
+        - link "Contact" [ref=f4e11] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=f4e12]:
+        - link "About us" [ref=f4e13] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=f4e14]:
+        - link "Cart" [ref=f4e15] [cursor=pointer]:
+          - /url: cart.html
+      - listitem
+      - listitem [ref=f4e71]:
+        - link "Log out" [ref=f4e72] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=f4e73]:
+        - link "Welcome radhabheemrai24@gmail.com" [ref=f4e74] [cursor=pointer]:
+          - /url: "#"
+      - listitem
+    - generic [ref=f4e21]:
+      - list [ref=f4e22]:
+        - listitem [ref=f4e23] [cursor=pointer]
+        - listitem [ref=f4e24] [cursor=pointer]
+        - listitem [ref=f4e25] [cursor=pointer]
+      - img "Second slide" [ref=f4e76]
+      - button "Previous" [ref=f4e29] [cursor=pointer]
+      - button "Next" [ref=f4e32] [cursor=pointer]
+  - generic [ref=f4e36]:
+    - generic [ref=f4e38]:
+      - link "CATEGORIES" [ref=f4e39] [cursor=pointer]:
+        - /url: ""
+      - link "Phones" [ref=f4e40] [cursor=pointer]:
+        - /url: "#"
+      - link "Laptops" [ref=f4e41] [cursor=pointer]:
+        - /url: "#"
+      - link "Monitors" [active] [ref=f4e42] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=f4e43]:
+      - generic [ref=f4e77]:
+        - generic [ref=f4e79]:
+          - link [ref=f4e80] [cursor=pointer]:
+            - /url: prod.html?idp_=10
+          - generic [ref=f4e81]:
+            - heading [level=4] [ref=f4e82]:
+              - link "Apple monitor 24" [ref=f4e83] [cursor=pointer]:
+                - /url: prod.html?idp_=10
+            - heading "$400" [level=5] [ref=f4e84]
+            - paragraph [ref=f4e85]: LED Cinema Display features a 27-inch glossy LED-backlit TFT active-matrix LCD display with IPS technology and an optimum resolution of 2560x1440. It has a 178 degree horizontal and vertical viewing angle, a "typical" brightness of 375 cd/m2, contrast ratio of 1000:1, and a 12 ms response time.
+        - generic [ref=f4e87]:
+          - link [ref=f4e88] [cursor=pointer]:
+            - /url: prod.html?idp_=14
+          - generic [ref=f4e89]:
+            - heading [level=4] [ref=f4e90]:
+              - link "ASUS Full HD" [ref=f4e91] [cursor=pointer]:
+                - /url: prod.html?idp_=14
+            - heading "$230" [level=5] [ref=f4e92]
+            - paragraph [ref=f4e93]: ASUS VS247H-P 23.6- Inch Full HD
+      - list [ref=f4e45]:
+        - listitem [ref=f4e46]:
+          - button "Previous" [ref=f4e47]
+        - listitem [ref=f4e48]:
+          - button "Next" [ref=f4e49] [cursor=pointer]
+  - generic [ref=f4e51]:
+    - generic [ref=f4e54]:
+      - heading "About Us" [level=4] [ref=f4e55]
+      - paragraph [ref=f4e56]: We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.
+    - generic [ref=f4e59]:
+      - heading "Get in Touch" [level=4] [ref=f4e60]
+      - paragraph [ref=f4e61]: "Address: 2390 El Camino Real"
+      - paragraph [ref=f4e62]: "Phone: +440 123456"
+      - paragraph [ref=f4e63]: "Email: demo@blazemeter.com"
+    - heading "PRODUCT STORE" [level=4] [ref=f4e67]
+  - contentinfo [ref=f4e69]:
+    - paragraph [ref=f4e70]: Copyright © Product Store

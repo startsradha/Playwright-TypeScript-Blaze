@@ -1,0 +1,34 @@
+{
+  "name": "blaze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "test": "playwright test tests/cart tests/catalog tests/checkout",
+  "test:chromium": "playwright test tests/cart tests/catalog tests/checkout --project=chromium",
+  "test:cart": "playwright test tests/cart --project=chromium",
+  "test:catalog": "playwright test tests/catalog --project=chromium",
+  "test:checkout": "playwright test tests/checkout --project=chromium",
+  "test:smoke": "playwright test tests/cart tests/catalog tests/checkout --project=chromium --grep \"@smoke\"",
+  "test:sanity": "playwright test tests/cart tests/catalog tests/checkout --project=chromium --grep \"@sanity\"",
+  "test:regression": "playwright test tests/cart tests/catalog tests/checkout --project=chromium --grep \"@regression\"",
+  "test:ci": "playwright test tests/cart tests/catalog tests/checkout --project=chromium --reporter=line,html",
+  "report": "playwright show-report"
+},
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+
+  }
+}
+

@@ -1,0 +1,9 @@
+[    1677ms] [WARNING] VIDEOJS: WARN: A plugin named "reloadSourceOnError" already exists. You may want to avoid re-registering plugins! @ https://www.demoblaze.com/node_modules/video.js/dist/video.min.js:11
+[    1720ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.demoblaze.com/:0
+[    1720ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.demoblaze.com/:0
+[   33164ms] [WARNING] Blocked aria-hidden on an element because its descendant retained focus. The focus must not be hidden from assistive technology users. Avoid using aria-hidden on a focused element or its ancestor. Consider using the inert attribute instead, which will also prevent focus. For more details, see the aria-hidden section of the WAI-ARIA specification at https://w3c.github.io/aria/#aria-hidden.
+Element with focus: <button.btn btn-primary>
+Ancestor with aria-hidden: <div.modal fade#logInModal> @ https://www.demoblaze.com/:0
+[   34184ms] [WARNING] VIDEOJS: WARN: A plugin named "reloadSourceOnError" already exists. You may want to avoid re-registering plugins! @ https://www.demoblaze.com/node_modules/video.js/dist/video.min.js:11
+[   34205ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.demoblaze.com/:0
+[   34205ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.demoblaze.com/:0

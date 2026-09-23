@@ -1,0 +1,51 @@
+- generic [active] [ref=f6e1]:
+  - text:             
+  - navigation [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - link "PRODUCT STORE" [ref=f6e4] [cursor=pointer]:
+        - /url: index.html
+      - list [ref=f6e7]:
+        - listitem [ref=f6e8]:
+          - link "Home (current)" [ref=f6e9] [cursor=pointer]:
+            - /url: index.html
+            - text: Home
+            - generic [ref=f6e10]: (current)
+        - listitem [ref=f6e11]:
+          - link "Contact" [ref=f6e12] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f6e13]:
+          - link "About us" [ref=f6e14] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f6e15]:
+          - link "Cart" [ref=f6e16] [cursor=pointer]:
+            - /url: cart.html
+        - listitem [ref=f6e17]:
+          - link "Log in" [ref=f6e18] [cursor=pointer]:
+            - /url: "#"
+        - listitem
+        - listitem
+        - listitem [ref=f6e19]:
+          - link "Sign up" [ref=f6e20] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=f6e24]:
+    - generic:
+      - list [ref=f6e25]:
+        - listitem [ref=f6e26] [cursor=pointer]
+        - listitem [ref=f6e27] [cursor=pointer]
+        - listitem [ref=f6e28] [cursor=pointer]
+      - link:
+        - /url: "#myCarousel-2"
+      - link:
+        - /url: "#myCarousel-2"
+  - generic [ref=f6e31]:
+    - generic [ref=f6e34]:
+      - heading "About Us" [level=4] [ref=f6e35]
+      - paragraph [ref=f6e36]: We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.
+    - generic [ref=f6e39]:
+      - heading "Get in Touch" [level=4] [ref=f6e40]
+      - paragraph [ref=f6e41]: "Address: 2390 El Camino Real"
+      - paragraph [ref=f6e42]: "Phone: +440 123456"
+      - paragraph [ref=f6e43]: "Email: demo@blazemeter.com"
+    - heading "PRODUCT STORE" [level=4] [ref=f6e47]
+  - contentinfo [ref=f6e49]:
+    - paragraph [ref=f6e50]: Copyright © Product Store

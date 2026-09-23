@@ -1,0 +1,65 @@
+- generic [active] [ref=f5e1]:
+  - text:             
+  - navigation [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - link "PRODUCT STORE" [ref=f5e4] [cursor=pointer]:
+        - /url: index.html
+      - list [ref=f5e7]:
+        - listitem [ref=f5e8]:
+          - link "Home (current)" [ref=f5e9] [cursor=pointer]:
+            - /url: index.html
+            - text: Home
+            - generic [ref=f5e10]: (current)
+        - listitem [ref=f5e11]:
+          - link "Contact" [ref=f5e12] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f5e13]:
+          - link "About us" [ref=f5e14] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f5e15]:
+          - link "Cart" [ref=f5e16] [cursor=pointer]:
+            - /url: cart.html
+        - listitem
+        - listitem [ref=f5e51]:
+          - link "Log out" [ref=f5e52] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f5e53]:
+          - link "Welcome radhabheemrai24@gmail.com" [ref=f5e54] [cursor=pointer]:
+            - /url: "#"
+        - listitem
+  - generic [ref=f5e22]:
+    - generic [ref=f5e55]:
+      - list [ref=f5e25]:
+        - listitem [ref=f5e26] [cursor=pointer]
+        - listitem [ref=f5e27] [cursor=pointer]
+        - listitem [ref=f5e28] [cursor=pointer]
+      - link:
+        - /url: "#myCarousel-2"
+      - link:
+        - /url: "#myCarousel-2"
+    - generic [ref=f5e29]:
+      - heading "Samsung galaxy s6" [level=2] [ref=f5e58]
+      - separator [ref=f5e59]
+      - heading "$360 *includes tax" [level=3] [ref=f5e60]
+      - separator [ref=f5e61]
+      - generic [ref=f5e62]:
+        - list:
+          - listitem
+        - generic [ref=f5e64]:
+          - strong [ref=f5e65]: Product description
+          - paragraph [ref=f5e66]: The Samsung Galaxy S6 is powered by 1.5GHz octa-core Samsung Exynos 7420 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage cannot be expanded.
+      - separator [ref=f5e67]
+      - link "Add to cart" [ref=f5e70] [cursor=pointer]:
+        - /url: "#"
+  - generic [ref=f5e31]:
+    - generic [ref=f5e34]:
+      - heading "About Us" [level=4] [ref=f5e35]
+      - paragraph [ref=f5e36]: We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.
+    - generic [ref=f5e39]:
+      - heading "Get in Touch" [level=4] [ref=f5e40]
+      - paragraph [ref=f5e41]: "Address: 2390 El Camino Real"
+      - paragraph [ref=f5e42]: "Phone: +440 123456"
+      - paragraph [ref=f5e43]: "Email: demo@blazemeter.com"
+    - heading "PRODUCT STORE" [level=4] [ref=f5e47]
+  - contentinfo [ref=f5e49]:
+    - paragraph [ref=f5e50]: Copyright © Product Store
