@@ -2,11 +2,15 @@ import { expect, Page } from '@playwright/test';
 import { appConfig } from '../config/app.config';
 
 export class CartPage {
-  readonly productRows = this.page.locator('#tbodyid tr');
-  readonly total = this.page.locator('#totalp');
-  readonly placeOrderButton = this.page.getByRole('button', { name: 'Place Order' });
+  readonly productRows;
+  readonly total;
+  readonly placeOrderButton;
 
-  constructor(readonly page: Page) {}
+  constructor(readonly page: Page) {
+    this.productRows = page.locator('#tbodyid tr');
+    this.total = page.locator('#totalp');
+    this.placeOrderButton = page.getByRole('button', { name: 'Place Order' });
+  }
 
   async goto(): Promise<void> {
     await this.page.goto(`${appConfig.baseUrl}/cart.html`);
