@@ -1,8 +1,7 @@
-const { expect } = require('@playwright/test');
-type Page = import('@playwright/test').Page;
+import { expect, type Page } from '@playwright/test';
 import { appConfig } from '../config/app.config';
 
-class HomePage {
+export class HomePage {
   readonly productCards: ReturnType<Page['locator']>;
 
   constructor(readonly page: Page) {
@@ -36,5 +35,3 @@ class HomePage {
     await this.productCards.filter({ hasText: name }).getByRole('heading', { name }).click();
   }
 }
-
-module.exports = { HomePage };
