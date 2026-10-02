@@ -3,9 +3,11 @@ type Page = import('@playwright/test').Page;
 import { appConfig } from '../config/app.config';
 
 class HomePage {
-  readonly productCards = this.page.locator('#tbodyid .card');
+  readonly productCards: ReturnType<Page['locator']>;
 
-  constructor(readonly page: Page) {}
+  constructor(readonly page: Page) {
+    this.productCards = this.page.locator('#tbodyid .card');
+  }
 
   async goto(): Promise<void> {
     await this.page.goto(appConfig.baseUrl);

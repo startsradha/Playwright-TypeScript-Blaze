@@ -1,13 +1,18 @@
-import { Page } from '@playwright/test';
+import { Locator, Page } from '@playwright/test';
 import { appConfig } from '../config/app.config';
 
 export class ProductPage {
-  readonly productName = this.page.locator('#tbodyid h2.name');
-  readonly price = this.page.locator('#tbodyid h3.price-container');
-  readonly description = this.page.locator('#tbodyid #more-information');
-  readonly addToCartButton = this.page.getByRole('link', { name: 'Add to cart' });
+  readonly productName: Locator;
+  readonly price: Locator;
+  readonly description: Locator;
+  readonly addToCartButton: Locator;
 
-  constructor(readonly page: Page) {}
+  constructor(readonly page: Page) {
+    this.productName = page.locator('#tbodyid h2.name');
+    this.price = page.locator('#tbodyid h3.price-container');
+    this.description = page.locator('#tbodyid #more-information');
+    this.addToCartButton = page.getByRole('link', { name: 'Add to cart' });
+  }
 
   async gotoWithId(id: string): Promise<void> {
     await this.page.goto(`${appConfig.baseUrl}/prod.html?idp_=${encodeURIComponent(id)}`);
