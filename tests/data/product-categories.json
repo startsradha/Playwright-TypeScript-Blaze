@@ -1,0 +1,14 @@
+[
+  {
+    "category": "Phones",
+    "expectedProductCount": 7
+  },
+  {
+    "category": "Laptops",
+    "expectedProductCount": 6
+  },
+  {
+    "category": "Monitors",
+    "expectedProductCount": 2
+  }
+]

@@ -1,20 +1,25 @@
-import { expect, Page } from '@playwright/test';
+import { expect, Locator, Page } from '@playwright/test';
 import { appConfig } from '../config/app.config';
+import { BasePage } from './base.page';
 
-export class CartPage {
-  readonly productRows;
-  readonly total;
-  readonly placeOrderButton;
+export class CartPage extends BasePage {
+  readonly productRows: Locator;
+  readonly total: Locator;
+  readonly placeOrderButton: Locator;
 
-  constructor(readonly page: Page) {
+  constructor(page: Page) {
+    super(page);
     this.productRows = page.locator('#tbodyid tr');
     this.total = page.locator('#totalp');
     this.placeOrderButton = page.getByRole('button', { name: 'Place Order' });
   }
 
+  protected override get readyLocator(): Locator {
+    return this.placeOrderButton;
+  }
+
   async goto(): Promise<void> {
-    await this.page.goto(`${appConfig.baseUrl}/cart.html`);
-    await expect(this.placeOrderButton).toBeVisible();
+    await this.navigateTo(`${appConfig.baseUrl}/cart.html`);
   }
 
   productRow(name: string) {

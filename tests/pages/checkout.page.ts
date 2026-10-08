@@ -1,20 +1,22 @@
-import { expect, Page } from '@playwright/test';
+import { expect, Locator, Page } from '@playwright/test';
+import { BasePage } from './base.page';
 
-export class CheckoutPage {
-  readonly modal: ReturnType<Page['locator']>;
-  readonly name: ReturnType<Page['locator']>;
-  readonly country: ReturnType<Page['locator']>;
-  readonly city: ReturnType<Page['locator']>;
-  readonly creditCard: ReturnType<Page['locator']>;
-  readonly month: ReturnType<Page['locator']>;
-  readonly year: ReturnType<Page['locator']>;
-  readonly purchaseButton: ReturnType<Page['getByRole']>;
-  readonly closeButton: ReturnType<Page['locator']>;
-  readonly confirmation: ReturnType<Page['locator']>;
+export class CheckoutPage extends BasePage {
+  readonly modal: Locator;
+  readonly name: Locator;
+  readonly country: Locator;
+  readonly city: Locator;
+  readonly creditCard: Locator;
+  readonly month: Locator;
+  readonly year: Locator;
+  readonly purchaseButton: Locator;
+  readonly closeButton: Locator;
+  readonly confirmation: Locator;
 
-  constructor(readonly page: Page) {
-    this.confirmation = this.page.locator('.sweet-alert');
-    this.modal = this.page.locator('#orderModal');
+  constructor(page: Page) {
+    super(page);
+    this.confirmation = page.locator('.sweet-alert');
+    this.modal = page.locator('#orderModal');
     this.name = this.modal.locator('#name');
     this.country = this.modal.locator('#country');
     this.city = this.modal.locator('#city');
@@ -25,9 +27,13 @@ export class CheckoutPage {
     this.closeButton = this.modal.getByRole('button', { name: 'Close' }).last();
   }
 
+  protected override get readyLocator(): Locator {
+    return this.modal;
+  }
+
   async open(): Promise<void> {
     await this.page.getByRole('button', { name: 'Place Order' }).click();
-    await expect(this.modal).toBeVisible();
+    await this.waitUntilReady();
   }
 
   async fill(data: {
