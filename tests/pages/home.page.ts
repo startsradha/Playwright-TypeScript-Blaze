@@ -1,16 +1,22 @@
-import { expect, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 import { appConfig } from '../config/app.config';
+import type { ProductCategory } from '../types/product';
+import { BasePage } from './base.page';
 
-export class HomePage {
-  readonly productCards: ReturnType<Page['locator']>;
+export class HomePage extends BasePage {
+  readonly productCards: Locator;
 
-  constructor(readonly page: Page) {
-    this.productCards = this.page.locator('#tbodyid .card');
+  constructor(page: Page) {
+    super(page);
+    this.productCards = page.locator('#tbodyid .card');
+  }
+
+  protected override get readyLocator(): Locator {
+    return this.productCards.first();
   }
 
   async goto(): Promise<void> {
-    await this.page.goto(appConfig.baseUrl);
-    await expect(this.productCards.first()).toBeVisible();
+    await this.navigateTo(appConfig.baseUrl);
   }
 
   async loginWithProvidedCredentials(): Promise<void> {
@@ -26,7 +32,7 @@ export class HomePage {
     if (alert) await alert.accept();
   }
 
-  async selectCategory(category: 'Phones' | 'Laptops' | 'Monitors'): Promise<void> {
+  async selectCategory(category: ProductCategory): Promise<void> {
     await this.page.getByRole('link', { name: category }).click();
     await expect(this.productCards.first()).toBeVisible();
   }

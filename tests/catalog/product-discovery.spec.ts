@@ -37,7 +37,7 @@ test.describe('Catalog and product discovery', () => {
   });
 
   test('Handle an unavailable or malformed product URL safely', { tag: '@regression' }, async ({ homePage, productPage }) => {
-    await productPage.gotoWithId('invalid');
+    await productPage.gotoWithId('invalid', { waitForReady: false });
     await expect(productPage.page).toHaveURL(/prod\.html\?idp_=invalid/);
 
     await homePage.goto();

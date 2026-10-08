@@ -1,9 +1,10 @@
 import { test, expect } from '../fixtures/test.fixture';
+import type { Product } from '../types/product';
 
 const products = [
   { name: 'Samsung galaxy s6', id: '1', price: 360 },
   { name: 'Nokia lumia 1520', id: '2', price: 820 },
-] as const;
+] as const satisfies readonly (Product & { id: string })[];
 
 test.describe('Cart and checkout', () => {
   test('Add multiple products, verify total, remove one item, and verify recalculation', { tag: '@smoke' }, async ({ homePage, productPage, cartPage }) => {
